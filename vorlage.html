@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Merhaba Deutsch</title>
+<meta name="theme-color" content="#1f5c4a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Merhaba">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="icon-192.png">
+<style>
+:root{
+  --bg:#f5f2ea;--card:#fffdf8;--ink:#1d2b27;--muted:#6b7a74;--line:#e4e0d4;
+  --green:#1f5c4a;--green-soft:#dfece5;--accent:#c8732f;--accent-soft:#f7e6d6;
+  --ok:#2f7d4f;--ok-soft:#dcefe2;--bad:#b4533a;--bad-soft:#f7e0d8;
+  --der:#2f62b5;--die:#c0392b;--das:#2f8a4f;
+  --shadow:0 1px 2px rgba(30,40,35,.06),0 4px 14px rgba(30,40,35,.05);
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#151b19;--card:#1e2623;--ink:#ecefe9;--muted:#9aa8a1;--line:#2e3834;
+  --green:#5fb592;--green-soft:#21362e;--accent:#e39a5c;--accent-soft:#3a2a1d;
+  --ok:#6cc48e;--ok-soft:#1f3a2a;--bad:#e5866c;--bad-soft:#3d2620;
+  --der:#7aa7f0;--die:#f08a7d;--das:#6fcf8f;--shadow:none;
+}}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--ink)}
+body{font:17px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding-bottom:env(safe-area-inset-bottom)}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:720px;margin:0 auto;padding:calc(14px + env(safe-area-inset-top)) 16px 40px}
+.top{display:flex;align-items:center;gap:10px;min-height:44px;margin-bottom:8px}
+.top h1{font-size:22px;margin:0;letter-spacing:-.4px;flex:1}
+.top h1 span{color:var(--accent)}
+.back{font-size:16px;color:var(--green);padding:10px 4px;font-weight:600}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
+/* Startseite */
+.hero{padding:18px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;margin-bottom:14px}
+.hero b{font-size:30px;letter-spacing:-1px}
+.alev{color:var(--accent)}
+.ring{width:64px;height:64px}
+.ring circle{fill:none;stroke-width:7}
+.ring .bgc{stroke:var(--line)}.ring .fg{stroke:var(--green);stroke-linecap:round;transition:stroke-dashoffset .4s}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 18px;border-radius:14px;background:var(--card);border:1px solid var(--line);font-weight:600}
+.btn.primary{background:var(--green);border-color:var(--green);color:#fff}
+@media (prefers-color-scheme:dark){.btn.primary{color:#0f1a16}}
+.btn.wide{flex:1}
+.btn:disabled{opacity:.45}
+.sec{font-size:13px;font-weight:700;letter-spacing:1.5px;color:var(--muted);margin:22px 4px 10px;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.topic{padding:14px;text-align:left;display:flex;flex-direction:column;gap:2px;min-height:118px}
+.topic .ic{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;margin-bottom:8px;background:hsl(var(--h) 42% 92%);color:hsl(var(--h) 48% 30%)}
+.topic .ic .ik{width:24px;height:24px}
+@media (prefers-color-scheme:dark){.topic .ic{background:hsl(var(--h) 25% 20%);color:hsl(var(--h) 55% 72%)}}
+.ik{width:1.15em;height:1.15em;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:none;vertical-align:-.2em}
+.h1ik{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:10px;margin-right:6px;vertical-align:-7px;background:hsl(var(--h) 42% 92%);color:hsl(var(--h) 48% 30%)}
+.h1ik .ik{width:20px;height:20px}
+@media (prefers-color-scheme:dark){.h1ik{background:hsl(var(--h) 25% 20%);color:hsl(var(--h) 55% 72%)}}
+.topic strong{font-size:17px;line-height:1.2}
+.topic .de{font-size:13px;color:var(--muted)}
+.bar{height:6px;background:var(--line);border-radius:6px;overflow:hidden;margin-top:auto}
+.bar i{display:block;height:100%;background:var(--green);border-radius:6px}
+.topic .bar{margin-top:10px}
+/* Thema */
+.tip{padding:14px 16px;background:var(--accent-soft);border:0;margin-bottom:12px;font-size:15px;line-height:1.5}
+.tip{display:flex;gap:10px;align-items:flex-start}
+.tip>.ik{width:20px;height:20px;color:var(--accent);margin-top:2px}
+.tools{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.tools .btn{flex:1;min-width:140px}
+.list{display:flex;flex-direction:column;gap:8px}
+.item{display:grid;grid-template-columns:1fr auto;gap:6px;padding:12px 8px 12px 14px;align-items:center}
+.item.playing{border-color:var(--green);background:var(--green-soft)}
+.item .txt{text-align:left;padding:0}
+.item .de{font-size:19px;font-weight:650;line-height:1.3}
+.item .ok{font-size:14px;color:var(--accent);margin-top:1px}
+.item .ok::before{content:"≈ ";opacity:.7}
+.item .tr{font-size:15px;color:var(--muted);margin-top:2px}
+.item .acts{display:flex;gap:2px}
+.ib{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;color:var(--green)}
+.ib .ik{width:22px;height:22px}
+.ib:active{background:var(--line)}
+.ib.rec{color:var(--bad)}
+.ib.on{background:var(--bad-soft)}
+.known::after{content:" ✓";color:var(--ok);font-size:15px}
+.hide-ok .ok{display:none}
+.a-der{color:var(--der)}.a-die{color:var(--die)}.a-das{color:var(--das)}
+.switch{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--muted);padding:6px 4px}
+.switch input{width:20px;height:20px;accent-color:var(--green)}
+/* Übung */
+.quiz{padding:20px 16px}
+.qhead{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:6px}
+.qbar{height:5px;background:var(--line);border-radius:5px;overflow:hidden;margin-bottom:18px}
+.qbar i{display:block;height:100%;background:var(--accent);transition:width .3s}
+.ask{font-size:14px;font-weight:700;color:var(--muted);letter-spacing:.5px;text-align:center}
+.prompt{font-size:clamp(24px,6.5vw,32px);font-weight:700;text-align:center;margin:10px 0 4px;line-height:1.25}
+.prompt-ok{text-align:center;color:var(--accent);font-size:15px;min-height:22px}
+.big{width:84px;height:84px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;margin:8px auto}
+.big .ik{width:36px;height:36px}
+@media (prefers-color-scheme:dark){.big{color:#0f1a16}}
+.center{text-align:center}
+.opts{display:grid;gap:10px;margin-top:18px}
+.opt{text-align:left;padding:15px 16px;border-radius:14px;background:var(--card);border:1.5px solid var(--line);font-size:17px;min-height:54px}
+.opt.right{background:var(--ok-soft);border-color:var(--ok)}
+.opt.wrong{background:var(--bad-soft);border-color:var(--bad)}
+.fb{min-height:26px;text-align:center;margin:14px 0 6px;font-weight:600}
+.fb.r{color:var(--ok)}.fb.w{color:var(--bad)}
+.done{padding:28px 18px;text-align:center}
+.done .emo{width:76px;height:76px;border-radius:50%;margin:0 auto 6px;display:grid;place-items:center;background:var(--green-soft);color:var(--green)}
+.done .emo .ik{width:38px;height:38px}
+.done h2{margin:6px 0}
+.foot{text-align:center;font-size:13px;color:var(--muted);margin-top:28px;line-height:1.6}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:15px;opacity:0;transition:opacity .25s;pointer-events:none;max-width:90vw;text-align:center}
+.toast.show{opacity:1}
+.help{padding:16px;font-size:15px;line-height:1.55}
+.help h3{margin:0 0 6px;font-size:17px}
+.help p{margin:0 0 10px}
+@media (min-width:600px){.grid{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+const KONULAR = __INHALT__;
+const SES = __SES__;
+const HEDEF = 10; // Tagesziel: richtige Antworten pro Tag
+// Linien-Symbole (24er Raster, Strichstärke per CSS .ik)
+const IK = {
+"chat": "<path d=\"M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z\"/>",
+"soru": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M9.5 9.5a2.5 2.5 0 0 1 4.9.7c0 1.8-2.4 2.3-2.4 3.8\"/><path d=\"M12 17h.01\"/>",
+"kisi": "<circle cx=\"12\" cy=\"8\" r=\"4\"/><path d=\"M4 21a8 8 0 0 1 16 0\"/>",
+"sayi": "<path d=\"M5 9h15M4 15h15M10 3 8 21M16 3l-2 18\"/>",
+"saat": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7v5l3 2\"/>",
+"canta": "<path d=\"M5 8h14l-1 13H6L5 8z\"/><path d=\"M9 8V6a3 3 0 0 1 6 0v2\"/>",
+"bina": "<path d=\"M3 21h18M5 21V11M19 21V11M9.5 21V11M14.5 21V11M3 10l9-6 9 6z\"/>",
+"saglik": "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"4\"/><path d=\"M12 8v8M8 12h8\"/>",
+"ev": "<path d=\"M3 11l9-7 9 7\"/><path d=\"M5 10v10h14V10\"/><path d=\"M10 20v-6h4v6\"/>",
+"is": "<rect x=\"3\" y=\"7\" width=\"18\" height=\"13\" rx=\"2\"/><path d=\"M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18\"/>",
+"otobus": "<rect x=\"5\" y=\"3\" width=\"14\" height=\"15\" rx=\"3\"/><path d=\"M5 11h14M8 21v-3M16 21v-3M8.5 14.5h.01M15.5 14.5h.01\"/>",
+"fincan": "<path d=\"M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9z\"/><path d=\"M17 11h1.5a2.5 2.5 0 0 1 0 5H17\"/><path d=\"M8 3v3M12 3v3\"/>",
+"uyari": "<path d=\"M12 3 2 20h20L12 3z\"/><path d=\"M12 10v4M12 17h.01\"/>",
+"dalga": "<path d=\"M3 12h1M7 8v8M11 5v14M15 9v6M19 11v2\"/>",
+"hoparlor": "<path d=\"M4 9h4l5-4v14l-5-4H4z\"/><path d=\"M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12\"/>",
+"yavas": "<path d=\"M4 17a8 8 0 1 1 16 0\"/><path d=\"M12 17 8 13\"/><path d=\"M12 17h.01\"/>",
+"mikrofon": "<rect x=\"9\" y=\"3\" width=\"6\" height=\"11\" rx=\"3\"/><path d=\"M5 11a7 7 0 0 0 14 0M12 18v3\"/>",
+"dur": "<rect x=\"6\" y=\"6\" width=\"12\" height=\"12\" rx=\"2\"/>",
+"oynat": "<path d=\"M7 4.5v15l12.5-7.5z\"/>",
+"kalem": "<path d=\"M4 20h4L19 9l-4-4L4 16z\"/><path d=\"M13.5 6.5l4 4\"/>",
+"karistir": "<path d=\"M3 7h3c5 0 7 10 12 10h3M3 17h3c2 0 3-1.5 4-3M14 10c1-1.5 2-3 4-3h3\"/><path d=\"M18 4l3 3-3 3M18 14l3 3-3 3\"/>",
+"tekrar": "<path d=\"M20 12a8 8 0 1 1-2.3-5.7L20 8\"/><path d=\"M20 3v5h-5\"/>",
+"alev": "<path d=\"M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3.5 2-4.5 0 2 1 3 2 3 0-3-1-5 1-8.5z\"/>",
+"ampul": "<path d=\"M9 18h6M10 21h4\"/><path d=\"M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z\"/>",
+"tik": "<path d=\"M5 12.5l4.5 4.5L19 7\"/>",
+"yildiz": "<path d=\"M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z\"/>",
+"filiz": "<path d=\"M12 21v-9\"/><path d=\"M12 12c0-4-3-6-7-6 0 4 3 6 7 6zM12 10c0-3 2.5-5 6-5 0 3.5-2.5 5-6 5z\"/>",
+"kupa": "<path d=\"M8 4h8v5a4 4 0 0 1-8 0V4z\"/><path d=\"M8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8 21h8M10 17h4\"/>",
+"paylas": "<path d=\"M12 3v12M8 7l4-4 4 4\"/><path d=\"M5 12v8h14v-8\"/>"
+};
+const ik = (n, cls = '') => `<svg class="ik ${cls}" viewBox="0 0 24 24" aria-hidden="true">${IK[n]}</svg>`;
+const TON = [160, 25, 205, 280, 45, 140, 220, 0, 30, 250, 190, 15, 340, 300]; // Farbton je Thema
+
+// --- Daten ---------------------------------------------------------------
+const SCHLUESSEL = __SCHLUESSEL__;
+const ALLE = [];
+KONULAR.forEach(k => { k.liste = k.items.map(e => {
+  const it = {id:k.id+':'+SCHLUESSEL[e[0]], k:k.id, de:e[0], tr:e[1], ok:e[2], ses:SCHLUESSEL[e[0]]};
+  ALLE.push(it); return it; }); });
+
+let durum = {kart:{}, gun:{}, okunus:true};
+try { durum = Object.assign(durum, JSON.parse(localStorage.getItem('merhaba-deutsch') || '{}')); } catch(e) {}
+function kaydet(){ try { localStorage.setItem('merhaba-deutsch', JSON.stringify(durum)); } catch(e) {} }
+const bugun = () => new Date().toLocaleDateString('sv-SE');
+const GUN = 86400000, ARALIK = [1,3,7,14,30];
+function seviye(it){ return (durum.kart[it.id] || {}).s || 0; }
+function bekleyen(){ const n = Date.now(); return ALLE.filter(it => durum.kart[it.id] && durum.kart[it.id].z <= n); }
+function isaretle(it, dogru){
+  const s = dogru ? Math.min(seviye(it) + 1, 5) : 0;
+  durum.kart[it.id] = {s, z: Date.now() + (dogru ? ARALIK[s-1] * GUN : 0)};
+  if (dogru) durum.gun[bugun()] = (durum.gun[bugun()] || 0) + 1;
+  kaydet();
+}
+function seri(){ // Tage in Folge mit mindestens einer richtigen Antwort
+  let n = 0, d = new Date();
+  if (!durum.gun[bugun()]) d.setDate(d.getDate() - 1);
+  while (durum.gun[d.toLocaleDateString('sv-SE')]) { n++; d.setDate(d.getDate() - 1); }
+  return n;
+}
+
+// --- Ton -----------------------------------------------------------------
+const ses = new Audio();
+ses.preload = 'auto';
+let sira = null; // laufende „Hepsini dinle“-Wiedergabe
+function cal(it, yavas){
+  durdurSira(false);
+  return oynat(it, yavas);
+}
+function oynat(it, yavas){
+  ses.src = SES[it.ses];
+  ses.playbackRate = yavas ? 0.7 : 1;
+  try { ses.preservesPitch = true; ses.webkitPreservesPitch = true; } catch(e) {}
+  isaretOynayan(it);
+  return ses.play().catch(() => {});
+}
+ses.addEventListener('ended', () => { if (sira) sira.ileri(); else isaretOynayan(null); });
+function isaretOynayan(it){
+  document.querySelectorAll('.item.playing').forEach(e => e.classList.remove('playing'));
+  if (it) { const e = document.getElementById('i-' + it.ses); if (e) e.classList.add('playing'); }
+}
+function hepsiniDinle(k){
+  if (sira) { durdurSira(true); return; }
+  let i = 0;
+  sira = { ileri(){ i++; if (i >= k.liste.length) { durdurSira(true); return; }
+    setTimeout(() => { if (sira) { oynat(k.liste[i]); kaydir(k.liste[i]); } }, 1800); } };
+  document.getElementById('dinleBtn').innerHTML = ik('dur') + ' Durdur';
+  oynat(k.liste[0]); kaydir(k.liste[0]);
+}
+function durdurSira(sifirla){
+  if (!sira) return;
+  sira = null; ses.pause();
+  const b = document.getElementById('dinleBtn'); if (b) b.innerHTML = ik('oynat') + ' Hepsini dinle';
+  if (sifirla) isaretOynayan(null);
+}
+function kaydir(it){ const e = document.getElementById('i-' + it.ses); if (e) e.scrollIntoView({block:'center', behavior:'smooth'}); }
+
+// --- Eigene Aufnahme -------------------------------------------------------
+let kayit = null;
+async function kaydetSes(it, btn){
+  if (kayit) { kayit.rec.stop(); return; }
+  if (!navigator.mediaDevices || !window.MediaRecorder) { bildir('Bu cihazda ses kaydı desteklenmiyor.'); return; }
+  let akis;
+  try { akis = await navigator.mediaDevices.getUserMedia({audio:true}); }
+  catch(e) { bildir('Mikrofon izni gerekli.'); return; }
+  durdurSira(false); ses.pause();
+  const rec = new MediaRecorder(akis), parca = [];
+  kayit = {rec};
+  btn.classList.add('on'); btn.innerHTML = ik('dur');
+  bildir('Şimdi söyle… Bitince tekrar dokun.');
+  const zaman = setTimeout(() => rec.state === 'recording' && rec.stop(), 8000);
+  rec.ondataavailable = e => parca.push(e.data);
+  rec.onstop = () => {
+    clearTimeout(zaman); akis.getTracks().forEach(t => t.stop());
+    kayit = null; btn.classList.remove('on'); btn.innerHTML = ik('mikrofon');
+    const benim = new Audio(URL.createObjectURL(new Blob(parca, {type: rec.mimeType})));
+    bildir('Önce orijinal, sonra senin sesin.');
+    oynat(it).then(() => {
+      const sonra = () => { ses.removeEventListener('ended', sonra); setTimeout(() => benim.play(), 400); };
+      ses.addEventListener('ended', sonra);
+    });
+  };
+  rec.start();
+}
+
+// --- Ansichten -------------------------------------------------------------
+const app = document.getElementById('app');
+const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function renkli(de){
+  const m = de.match(/^(der|die|das) (.*)$/);
+  return m ? `<span class="a-${m[1]}">${m[1]}</span> ${esc(m[2])}` : esc(de);
+}
+function bildir(t){ const e = document.getElementById('toast'); e.textContent = t; e.classList.add('show');
+  clearTimeout(bildir.t); bildir.t = setTimeout(() => e.classList.remove('show'), 2600); }
+function git(h){ if (location.hash === h) yonlendir(); else location.hash = h; }
+
+function anaSayfa(){
+  const n = durum.gun[bugun()] || 0, oran = Math.min(n / HEDEF, 1), r = 26, c = 2 * Math.PI * r;
+  const bk = bekleyen().length, sr = seri();
+  app.innerHTML = `
+  <div class="top"><h1>Merhaba <span>Deutsch</span></h1><button class="btn" onclick="git('#yardim')" aria-label="Yardım">?</button></div>
+  <div class="card hero">
+    <div><div class="small muted">BUGÜNKÜ HEDEF</div><b>${n}</b> <span class="muted">/ ${HEDEF} doğru cevap</span>
+      <div class="small muted" style="margin-top:4px">${sr ? ik('alev', 'alev') + ' ' + sr + ' gündür düzenli' : 'Bugün başla, her gün biraz!'}</div></div>
+    <svg class="ring" viewBox="0 0 64 64"><circle class="bgc" cx="32" cy="32" r="${r}"/><circle class="fg" cx="32" cy="32" r="${r}"
+      stroke-dasharray="${c}" stroke-dashoffset="${c * (1 - oran)}" transform="rotate(-90 32 32)"/></svg>
+  </div>
+  <div class="row">
+    <button class="btn primary wide" onclick="git('#tekrar')" ${bk ? '' : 'disabled'}>${ik('tekrar')} Tekrar et${bk ? ' (' + bk + ')' : ''}</button>
+    <button class="btn wide" onclick="git('#karisik')">${ik('karistir')} Karışık alıştırma</button>
+  </div>
+  <div class="sec">Konular</div>
+  <div class="grid">${KONULAR.map((k, ki) => {
+    const ogr = k.liste.filter(it => seviye(it) > 0).length;
+    return `<button class="card topic" style="--h:${TON[ki % TON.length]}" onclick="git('#k/${k.id}')"><span class="ic">${ik(k.icon)}</span>
+      <strong>${k.tr}</strong><span class="de" lang="de">${k.de}</span>
+      <div class="bar"><i style="width:${ogr / k.liste.length * 100}%"></i></div>
+      <span class="small muted">${ogr} / ${k.liste.length}</span></button>`; }).join('')}</div>
+  <p class="foot">İnternetsiz çalışır · İlerlemen bu cihazda kalır.</p>`;
+}
+
+function konuSayfasi(k){
+  app.innerHTML = `
+  <div class="top"><button class="back" onclick="git('#')">‹ Konular</button></div>
+  <div class="top" style="margin-top:-6px"><h1><span class="h1ik" style="--h:${TON[KONULAR.indexOf(k) % TON.length]}">${ik(k.icon)}</span>${k.tr} <span class="small muted" lang="de">· ${k.de}</span></h1></div>
+  <div class="card tip">${ik('ampul')}<div>${k.tip}</div></div>
+  <div class="tools">
+    <button class="btn" id="dinleBtn" onclick="hepsiniDinle(KONU)">${ik('oynat')} Hepsini dinle</button>
+    <button class="btn primary" onclick="git('#a/${k.id}')">${ik('kalem')} Alıştırma yap</button>
+  </div>
+  <label class="switch"><input type="checkbox" ${durum.okunus ? 'checked' : ''} onchange="durum.okunus=this.checked;kaydet();document.getElementById('liste').classList.toggle('hide-ok',!this.checked)"> Okunuşu göster</label>
+  <div class="list ${durum.okunus ? '' : 'hide-ok'}" id="liste">${k.liste.map((it, i) => `
+    <div class="card item" id="i-${it.ses}">
+      <button class="txt" onclick="cal(KONU.liste[${i}])">
+        <div class="de ${seviye(it) > 0 ? 'known' : ''}" lang="de">${renkli(it.de)}</div>
+        <div class="ok">${esc(it.ok)}</div>
+        <div class="tr">${esc(it.tr)}</div></button>
+      <div class="acts">
+        <button class="ib" onclick="cal(KONU.liste[${i}])" aria-label="Dinle">${ik('hoparlor')}</button>
+        <button class="ib" onclick="cal(KONU.liste[${i}],true)" aria-label="Yavaş dinle">${ik('yavas')}</button>
+        <button class="ib rec" onclick="kaydetSes(KONU.liste[${i}],this)" aria-label="Kendini kaydet">${ik('mikrofon')}</button>
+      </div></div>`).join('')}</div>
+  <p class="foot">${ik('hoparlor')} dinle · ${ik('yavas')} yavaş dinle · ${ik('mikrofon')} kendin söyle ve karşılaştır</p>`;
+}
+
+// --- Übung -----------------------------------------------------------------
+let test = null;
+const karistir = a => a.map(x => [Math.random(), x]).sort((p, q) => p[0] - q[0]).map(x => x[1]);
+function testBaslat(sorular, baslik, geri){
+  test = {sorular, i:0, dogru:0, baslik, geri, cevaplandi:false};
+  soru();
+}
+function secenekler(it){
+  const ayni = karistir(ALLE.filter(x => x.k === it.k && x.tr !== it.tr && x.de !== it.de));
+  const diger = karistir(ALLE.filter(x => x.k !== it.k));
+  const sec = [it];
+  for (const x of ayni.concat(diger)) { if (sec.length >= 4) break;
+    if (!sec.some(y => y.tr === x.tr || y.de === x.de)) sec.push(x); }
+  return karistir(sec);
+}
+function soru(){
+  const t = test;
+  if (t.i >= t.sorular.length) return sonuc();
+  const it = t.sorular[t.i];
+  // Fragetyp: 0 = Deutsch lesen+hören → Türkisch, 1 = Türkisch → Deutsch, 2 = nur hören → Türkisch
+  const tip = seviye(it) === 0 ? (t.i % 2) : [0, 1, 2][t.i % 3];
+  t.tip = tip; t.cevaplandi = false; t.sec = secenekler(it);
+  const ust = `<div class="qhead"><span>${t.baslik}</span><span>${t.i + 1} / ${t.sorular.length}</span></div>
+    <div class="qbar"><i style="width:${t.i / t.sorular.length * 100}%"></i></div>`;
+  let orta;
+  if (tip === 1) orta = `<div class="ask">ALMANCASI NE?</div><div class="prompt">${esc(it.tr)}</div><div class="prompt-ok"></div>`;
+  else if (tip === 2) orta = `<div class="ask">DİNLE — NE DEMEK?</div><button class="big" onclick="cal(test.sorular[test.i])" aria-label="Tekrar dinle">${ik('hoparlor')}</button>
+    <div class="center small muted">Tekrar dinlemek için dokun</div>`;
+  else orta = `<div class="ask">TÜRKÇESİ NE?</div><div class="prompt" lang="de">${renkli(it.de)}</div>
+    <div class="center"><button class="btn" onclick="cal(test.sorular[test.i])">${ik('hoparlor')} Dinle</button></div>`;
+  app.innerHTML = `<div class="top"><button class="back" onclick="git(test.geri)">‹ Çık</button></div>
+    <div class="card quiz">${ust}${orta}
+    <div class="opts">${t.sec.map((x, j) => `<button class="opt" ${tip === 1 ? 'lang="de"' : ''} onclick="cevap(${j},this)">${tip === 1 ? renkli(x.de) : esc(x.tr)}</button>`).join('')}</div>
+    <div class="fb" id="fb" role="status"></div>
+    <button class="btn primary" id="ileri" style="width:100%;visibility:hidden" onclick="test.i++;soru()">Devam →</button></div>`;
+  if (tip !== 1) cal(it);
+}
+function cevap(j, btn){
+  const t = test; if (t.cevaplandi) return; t.cevaplandi = true;
+  const it = t.sorular[t.i], dogru = t.sec[j] === it;
+  if (dogru) t.dogru++;
+  isaretle(it, dogru);
+  document.querySelectorAll('.opt').forEach((b, k) => { b.disabled = true; if (t.sec[k] === it) b.classList.add('right'); });
+  if (!dogru) btn.classList.add('wrong');
+  const fb = document.getElementById('fb');
+  fb.className = 'fb ' + (dogru ? 'r' : 'w');
+  fb.innerHTML = dogru ? ik('tik') + ' Doğru!' : 'Doğrusu: <span lang="de">' + esc(it.de) + '</span> = ' + esc(it.tr);
+  if (t.tip !== 0 || !dogru) cal(it);
+  document.getElementById('ileri').style.visibility = 'visible';
+}
+function sonuc(){
+  const t = test, n = t.sorular.length;
+  const emo = ik(!n ? 'tik' : t.dogru === n ? 'kupa' : t.dogru >= n * .7 ? 'yildiz' : 'filiz');
+  app.innerHTML = `<div class="card done"><div class="emo">${emo}</div>
+    <h2>${n ? 'Aferin!' : 'Şimdilik tekrar yok'}</h2>
+    <p class="muted">${n ? t.dogru + ' / ' + n + ' doğru' : 'Önce bir konudan alıştırma yap. Bildiğin cümleler 1, 3, 7, 14 ve 30 gün sonra tekrar gelir.'}</p>
+    ${n && t.dogru < n ? '<p class="small muted">Yanlış cevapladıkların „Tekrar et“ listesinde seni bekliyor.</p>' : ''}
+    <div class="row" style="justify-content:center;margin-top:14px">
+      <button class="btn primary" onclick="git('#')">Ana sayfa</button>
+      ${n ? `<button class="btn" onclick="yonlendir()">Bir daha</button>` : ''}</div></div>`;
+}
+
+function yardim(){
+  app.innerHTML = `<div class="top"><button class="back" onclick="git('#')">‹ Geri</button></div>
+  <div class="card help">
+    <h3>Nasıl kullanılır?</h3>
+    <p>1. Bir <b>konu</b> seç. Cümleye dokun, Almanca dinle. ${ik('yavas')} ile yavaş dinle.</p>
+    <p>2. ${ik('mikrofon')} ile kendini kaydet: Önce orijinali, sonra kendi sesini duyarsın.</p>
+    <p>3. <b>Alıştırma yap</b>: Doğru bildiğin cümleler 1, 3, 7, 14 ve 30 gün sonra <b>Tekrar et</b> listesine gelir. Böylece unutmazsın.</p>
+    <p>4. Her gün <b>${HEDEF} doğru cevap</b> hedefle. Az ama her gün — en iyi yöntem bu.</p>
+    <h3 style="margin-top:14px">Renkler</h3>
+    <p><span class="a-der">der</span> = eril · <span class="a-die">die</span> = dişil · <span class="a-das">das</span> = nötr. Kelimeyi hep artikeliyle öğren.</p>
+    <p><span style="color:var(--accent)">≈ Turuncu satır</span>: Türkçe harflerle yaklaşık okunuşu.</p>
+    <h3 style="margin-top:14px">Telefona uygulama gibi ekle</h3>
+    <p><b>iPhone:</b> Safari'de aç → Paylaş ${ik('paylas')} → „Ana Ekrana Ekle“.<br>
+       <b>Android:</b> Chrome'da aç → ⋮ → „Uygulamayı yükle“ veya „Ana ekrana ekle“.</p>
+    <p>Bir kere açtıktan sonra internetsiz de çalışır.</p>
+  </div>`;
+}
+
+let KONU = null;
+function yonlendir(){
+  durdurSira(true); ses.pause();
+  const h = location.hash.slice(1);
+  window.scrollTo(0, 0);
+  let m;
+  if ((m = h.match(/^k\/(.+)/)) && (KONU = KONULAR.find(k => k.id === m[1]))) return konuSayfasi(KONU);
+  if ((m = h.match(/^a\/(.+)/)) && (KONU = KONULAR.find(k => k.id === m[1]))) {
+    const zayif = karistir(KONU.liste).sort((a, b) => seviye(a) - seviye(b));
+    return testBaslat(karistir(zayif.slice(0, 10)), KONU.tr, '#k/' + KONU.id);
+  }
+  if (h === 'tekrar') return testBaslat(karistir(bekleyen()).slice(0, 15), 'Tekrar', '#');
+  if (h === 'karisik') {
+    const havuz = ALLE.filter(it => seviye(it) > 0);
+    const kaynak = havuz.length >= 10 ? havuz : ALLE;
+    return testBaslat(karistir(kaynak).slice(0, 10), 'Karışık', '#');
+  }
+  if (h === 'yardim') return yardim();
+  anaSayfa();
+}
+window.addEventListener('hashchange', yonlendir);
+yonlendir();
+
+if ('serviceWorker' in navigator && location.protocol.startsWith('http'))
+  navigator.serviceWorker.register('sw.js').catch(() => {});
+</script>
+</body>
+</html>
