@@ -1,6 +1,6 @@
 # Merhaba Deutsch
 
-**[musancak.github.io/merhaba-deutsch](https://musancak.github.io/merhaba-deutsch/)**
+**[merhaba.musancak.com](https://merhaba.musancak.com/)**
 
 Eine Lern-App für Menschen, die neu aus der Türkei nach Deutschland kommen: die wichtigsten Sätze für Alltag, Amt, Arzt, Arbeit und Wohnung – auf Türkisch erklärt und mit Aussprachehilfe in türkischer Schreibweise.
 
